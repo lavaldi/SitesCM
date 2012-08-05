@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SitesCM</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>       
+    </head>
+    <body>
+        <div id="cielo"></div>
+        <div id="ubuntu">
+            <a href="http://ubuntu.sitescm.com/" target="_blank"></a>
+        </div>
+        <div id="html5">
+            <a href="http://develop.sitescm.com/" target="_blank"></a>
+        </div>
+        <div id="jcm">
+            <a href="http://jchangedme.sitescm.com/" target="_blank"></a>
+        </div>
+        <div id="nubes"></div>
+        <div id="pasto"></div>
+        <div id="titulo"></div>
+        <div id="autores">
+            <div id="cla" onMouseOver="nomostrar(this)"></div>
+            <div id="car" onMouseOver="nomostrar(this)"></div>
+            <div id="clat" onMouseOut="mostrar(this)">
+                <p id="follow"><a href="https://twitter.com/Iavaldi" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @Iavaldi</a></p>
+            </div>
+            <div id="cart" onMouseOut="mostrar(this)">
+                <p id="follow"><a href="https://twitter.com/czaratef" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @czaratef</a></p>
+            </div>
+        </div>
+
+        <!--SCRIPTS-->
+        <script type="text/javascript" src="jquery-1.3.2.js"></script>
+        <script type="text/javascript" src="jquery.color.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#titulo').animate({'opacity':1}, 1000);
+                $('#nubes').animate({'backgroundPosition':'1000px 0px','opacity':100}, 30000);
+            });
+        </script>
+        <script>
+            !function(d,s,id){
+                var js,fjs=d.getElementsByTagName(s)[0];
+                if(!d.getElementById(id)){
+                    js=d.createElement(s);
+                    js.id=id;js.src="//platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js,fjs);
+                }
+            }
+            (document,"script","twitter-wjs");
+        </script>
+        <script type="text/javascript">
+            function nomostrar(elemento){
+                var mos;
+                elemento.style.display = 'none';
+                if(elemento.id == 'cla'){
+                    mos = document.getElementById("clat");
+                }
+                else {
+                    mos = document.getElementById("cart");
+                }
+                mos.style.display='block';
+            }
+            function mostrar(elemento){
+                var nomos;
+                elemento.style.display = 'none';
+                if(elemento.id == 'clat'){
+                    nomos = document.getElementById("cla");
+                }
+                else {
+                    nomos = document.getElementById("car");
+                }
+                nomos.style.display='block';
+            }   
+        </script>
+    </body>
+</html>
