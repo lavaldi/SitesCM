@@ -1,3 +1,4 @@
+@import url('normalize.css');
 body{
     overflow:hidden;
 }
@@ -86,8 +87,8 @@ a {
     position:absolute;
     left:5%;
     top:0px;
-    width:500px;
-    height:300px;
+    width:50%;
+    height:50%;
     background:transparent url(../titulo.png) no-repeat center center;
     z-index:6;
     opacity:0;
@@ -98,12 +99,12 @@ a {
     position: absolute;
     top: 10%;
     right: 10%;
-    width: 350px;
-    height: 300px;
+    width: 35%;
+    /*height: 300px;*/
     z-index: 3;
 }
 
-#cla, #car {
+/*#cla, #car {
     position: absolute;
     width:150px;
     height:150px;
@@ -142,4 +143,328 @@ a {
 
 #follow {
     padding: 10px;
+}*/
+/***************************************************/
+.lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.lista:after,
+.elemento:before {
+    content: '';
+    display: table;
+}
+
+.lista:after {
+    clear: both;
+}
+
+.lista li {
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+    margin: 20px;
+}
+.elemento {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    cursor: default;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: inset 0 0 0 15px rgba(255,255,255, 0.5);
+    
+    -webkit-transform-origin: 5% 40%;
+    -moz-transform-origin: 5% 40%;
+    -o-transform-origin: 5% 40%;
+    -ms-transform-origin: 5% 40%;
+    transform-origin: 5% 40%;
+    
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.thumb:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 50%;
+    top: 40%;
+    /*left: 95%;*/
+    right: 93%;
+    margin: -4px 0 0 -4px;
+    background: rgb(14,14,14);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(14,14,14,1) 0%, rgba(125,126,125,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(14,14,14,1)), color-stop(100%,rgba(125,126,125,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(14,14,14,1) 0%,rgba(125,126,125,1) 100%);
+    box-shadow: 0 0 1px rgba(255,255,255,0.9);
+}
+
+.img-1 { 
+    background-image: url(../images/clindy.png);
+    z-index: 12;
+}
+
+.img-2 { 
+    background-image: url(../images/kenny.png);
+    z-index: 12;
+}
+
+.info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #00A8E3 url(../images/noise.png);
+    box-shadow: inset 0 0 0 5px rgba(0,0,0,0.05);
+}
+
+.info h3 {
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 18px;
+    padding: 22px 0 0 0;
+    height: 40px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-shadow: 
+        0 0 1px #fff, 
+        0 1px 2px rgba(0,0,0,0.3);
+}
+
+.info p {
+    color: #fff;
+    padding: 10px 5px;
+    font-style: italic;
+    margin: 0 30px;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.info p a {
+    display: block;
+    color: #333;
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    color: #fff;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding-top: 24px;
+    margin: 7px auto 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    opacity: 0;
+    
+    -webkit-transition: 
+        -webkit-transform 0.3s ease-in-out 0.2s,
+        opacity 0.3s ease-in-out 0.2s,
+        background 0.2s linear 0s;
+    -moz-transition: 
+        -moz-transform 0.3s ease-in-out 0.2s,
+        opacity 0.3s ease-in-out 0.2s,
+        background 0.2s linear 0s;
+    -o-transition: 
+        -o-transform 0.3s ease-in-out 0.2s,
+        opacity 0.3s ease-in-out 0.2s,
+        background 0.2s linear 0s;
+    -ms-transition: 
+        -ms-transform 0.3s ease-in-out 0.2s,
+        opacity 0.3s ease-in-out 0.2s,
+        background 0.2s linear 0s;
+    transition: 
+        transform 0.3s ease-in-out 0.2s,
+        opacity 0.3s ease-in-out 0.2s,
+        background 0.2s linear 0s;
+        
+    -webkit-transform: translateX(60px) rotate(90deg);
+    -moz-transform: translateX(60px) rotate(90deg);
+    -o-transform: translateX(60px) rotate(90deg);
+    -ms-transform: translateX(60px) rotate(90deg);
+    transform: translateX(60px) rotate(90deg);
+        
+    -webkit-backface-visibility: hidden;
+}
+
+.info p a:hover {
+    background: rgba(255,255,255,0.5);
+}
+.elemento:hover .thumb {
+    box-shadow: inset 0 0 0 15px rgba(255,255,255, 0.5), 0 1px 3px rgba(0,0,0,0.2);
+    -webkit-transform: rotate(110deg);
+    -moz-transform: rotate(110deg);
+    -o-transform: rotate(110deg);
+    -ms-transform: rotate(110deg);
+    transform: rotate(110deg);
+}
+.elemento:hover .info p a{
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -moz-transform: translateX(0px) rotate(0deg);
+    -o-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+}
+
+/******************************************************/
+#paginas {
+    position: absolute;
+    top:50%;
+    width:90%;
+    height: 150px;
+    left: 5%;
+    z-index: 3;
+}
+.pag-item {
+    width: 100%;
+    height: 100%;
+    /*border-radius: 50%;*/
+    position: relative;
+    cursor: default;
+    -webkit-perspective: 900px;
+    -moz-perspective: 900px;
+    -o-perspective: 900px;
+    -ms-perspective: 900px;
+    perspective: 900px;
+}
+.pag-info{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.pag-info > div {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*border-radius: 50%;*/
+    background-position: center center;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    -webkit-transform-origin: 50% 0%;
+    -moz-transform-origin: 50% 0%;
+    -o-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+}
+/*
+.pag-info .pag-info-front {
+    box-shadow: inset 0 0 0 16px rgba(0,0,0,0.3);
+}*/
+
+.pag-info .pag-info-back {
+    -webkit-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    -moz-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    -o-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    -ms-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    background: #B1DDEF;
+    opacity: 0;
+}
+.pag-img-1, .pag-img-2, .pag-img-3 {
+    background-repeat: no-repeat;
+}
+.pag-img-1 { 
+    background-image: url(../images/HTML5.png);
+}
+
+.pag-img-2 { 
+    background-image: url(../images/ubuntu.png);
+}
+
+.pag-img-3 { 
+    background-image: url(../images/jcm.png);
+}
+
+.pag-info h3 {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    margin: 0 15px;
+    padding: 60px 0 0 0;
+    height: 110px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-shadow: 
+        0 0 1px #fff, 
+        0 1px 2px rgba(0,0,0,0.3);
+}
+
+.pag-info p {
+    color: #000;
+    padding: 10px 5px;
+    font-style: italic;
+    margin: 0 30px;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.pag-info p a {
+    display: block;
+    color: #000;
+    color: rgba(0,0,0,0.9);
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding-top: 4px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.pag-info p a:hover {
+    color: #F16529;
+    color: rgba(241,101,41, 0.8);
+}
+
+.pag-item:hover .pag-info-front {
+    -webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    -moz-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    -o-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    -ms-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    opacity: 0;
+}
+
+.pag-item:hover .pag-info-back {
+    border-radius: 50%;
+    -webkit-transform: rotate3d(1,0,0,0deg);
+    -moz-transform: rotate3d(1,0,0,0deg);
+    -o-transform: rotate3d(1,0,0,0deg);
+    -ms-transform: rotate3d(1,0,0,0deg);
+    transform: rotate3d(1,0,0,0deg);
+    opacity: 1;
 }

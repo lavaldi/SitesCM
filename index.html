@@ -3,53 +3,113 @@
     <head>
         <title>SitesCM</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>       
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+        <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>     
     </head>
     <body>
         <div id="cielo"></div>
-        <div id="ubuntu">
-            <a href="http://ubuntu.sitescm.com/" target="_blank"></a>
-        </div>
-        <div id="html5">
-            <a href="http://develop.sitescm.com/" target="_blank"></a>
-        </div>
-        <div id="jcm">
-            <a href="http://jchangedme.sitescm.com/" target="_blank"></a>
-        </div>
         <div id="nubes"></div>
         <div id="pasto"></div>
         <div id="titulo"></div>
+        <!--div id="ubuntu">
+            <a class="img" href="http://ubuntu.sitescm.com/" alt="Ubuntu Tips" target="_blank"></a>
+        </div>
+        <div id="html5">
+            <a class="img" href="http://develop.sitescm.com/" alt="Developers Web" target="_blank"></a>
+        </div>
+        <div id="jcm">
+            <a class="img" href="http://jchangedme.sitescm.com/" alt="Jesús Changed Me" target="_blank"></a>
+        </div-->
+        <div id="paginas">
+            <ul class="lista">
+                <li class="pag">
+                    <div class="pag-item">               
+                        <div class="pag-info">
+                            <div class="pag-info-front pag-img-1"></div>
+                            <div class="pag-info-back">
+                                <h3>Developers Web</h3>
+                                <p><a href="http://develop.sitescm.com/" alt="Developers Web" target="_blank">Visitar la Página</a></p>
+                            </div>  
+                        </div>
+                    </div>
+                </li>
+                <li class="pag">
+                    <div class="pag-item">
+                        <div class="pag-info">
+                            <div class="pag-info-front pag-img-2"></div>
+                            <div class="pag-info-back">
+                                <h3>Ubuntu Tips</h3>
+                                <p><a href="http://ubuntu.sitescm.com/" alt="Ubuntu Tips" target="_blank">Visitar la Página</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="pag">
+                    <div class="pag-item">
+                        <div class="pag-info">
+                            <div class="pag-info-front pag-img-3"></div>
+                            <div class="pag-info-back">
+                                <h3>Jesus Changed Me</h3>
+                                <p><a href="http://jchangedme.sitescm.com/" alt="Jesús Changed Me" target="_blank">Visitar la Página</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <div id="autores">
-            <div id="cla" onMouseOver="nomostrar(this)"></div>
+            <!--div id="cla" onMouseOver="nomostrar(this)"></div>
             <div id="car" onMouseOver="nomostrar(this)"></div>
             <div id="clat" onMouseOut="mostrar(this)">
-                <p id="follow"><a href="https://twitter.com/Iavaldi" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @Iavaldi</a></p>
+                <p id="follow"><a href="https://twitter.com/Iavaldi" class="twitter-follow-button" data-show-count="false" data-lang="es" >Seguir a @Iavaldi</a>
+                <div id="fb-root"></div>
+                <div style="margin-left: 25px;" class="fb-like" data-href="http://sitescm.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div></p>
             </div>
             <div id="cart" onMouseOut="mostrar(this)">
-                <p id="follow"><a href="https://twitter.com/czaratef" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @czaratef</a></p>
-            </div>
+                <p id="follow"><a href="https://twitter.com/czaratef" class="twitter-follow-button" data-show-count="false" data-lang="es" >Seguir a @czaratef</a>
+                <div style="margin-left: 25px;" class="fb-like" data-href="http://sitescm.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div></p>
+            </div-->
+            <ul class="lista">
+                    <li>
+                        <div class="elemento">   
+                            <div class="info">
+                                <h3>La Valdi</h3>
+                                <p><a href="https://twitter.com/Iavaldi" class="twitter-follow-button" data-show-count="false" data-lang="es" >Seguir a @Iavaldi</a>
+                                <div id="fb-root"></div>
+                <div style="margin-left: 25px;" class="fb-like" data-href="http://sitescm.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div></p>
+                            </div>
+                            <div class="thumb img-1"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="elemento">
+                            <div class="info">
+                                <h3>KennyWar</h3>
+                                <p><a href="https://twitter.com/czaratef" class="twitter-follow-button" data-show-count="false" data-lang="es" >Seguir a @czaratef</a></p>
+                            </div>
+                            <div class="thumb img-2"></div>
+                        </div>
+                    </li>
+                </ul>
         </div>
 
         <!--SCRIPTS-->
-        <script type="text/javascript" src="jquery-1.3.2.js"></script>
-        <script type="text/javascript" src="jquery.color.js"></script>
+        <script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+        <script type="text/javascript" src="js/jquery.color.js"></script>
         <script type="text/javascript">
             $(function() {
                 $('#titulo').animate({'opacity':1}, 1000);
                 $('#nubes').animate({'backgroundPosition':'1000px 0px','opacity':100}, 30000);
             });
         </script>
-        <script>
-            !function(d,s,id){
-                var js,fjs=d.getElementsByTagName(s)[0];
-                if(!d.getElementById(id)){
-                    js=d.createElement(s);
-                    js.id=id;js.src="//platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js,fjs);
-                }
-            }
-            (document,"script","twitter-wjs");
-        </script>
+        <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=479617585397237";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         <script type="text/javascript">
             function nomostrar(elemento){
                 var mos;
